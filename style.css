@@ -221,10 +221,34 @@ body {
     justify-content: center;
 }
 
+box-shadow: 0 -2px 16px rgba(142, 68, 173, 0.08);
+position: relative;
+z-index: 2;
+transition: background 0.3s;
 .navbar-nav {
     display: flex;
     flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     gap: 1.5rem;
+    footer i {
+        font-size: 1.2em;
+        vertical-align: middle;
+        color: #8e44ad;
+        margin-right: 4px;
+        transition: color 0.2s;
+    }
+    footer:hover {
+        background: linear-gradient(90deg, #e1bee7 60%, #f8f9fa 100%);
+    }
+    @media (max-width: 600px) {
+        footer {
+            padding: 18px 0 12px 0;
+            font-size: 0.98rem;
+        }
+    }
     align-items: center;
 }
 
@@ -265,4 +289,21 @@ body {
     color: #222;
     text-decoration: none;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+footer {
+    background: linear-gradient(90deg, #f8f9fa 60%, #e1bee7 100%);
+    color: #8e44ad;
+    text-align: center;
+    padding: 24px 0 18px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.08rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-top: 1.5px solid #e1bee7;
+    margin-top: 32px;
+}
+
+footer p {
+    margin: 0;
 }
